@@ -1,10 +1,9 @@
 .App {
   width: 100vw;
   height: 100vh;
-  background-color: linear-gradient(90deg, #002F52 35%, #326589);
+  background: linear-gradient(90deg, #002f52 35%, #326589);
 }
 
 .App-header {
-  background-color: #FFF;
-  
+  background-color: #fff;
 }
