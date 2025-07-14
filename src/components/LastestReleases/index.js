@@ -1,6 +1,8 @@
 import styled from 'styled-components'
+import imgBook from '../../img/livro2.png'
 import { books } from './dataLatestReleases'
 import { Title } from '../Title'
+import RecommendationCard from '../RecommendationCard'
 
 const LastestReleasesContainer = styled.section`
     background-color: #EBECEE;
@@ -31,6 +33,14 @@ function LastestReleases() {
                     <img src={book.src} alt={book.name}/>
                 ))}
             </NewBooksContainer>
+            <RecommendationCard
+                title='Talvez você se interesse por...'
+                subtitle='Angular 11'
+                description='Angular é um framework para construção de aplicações web.
+                    A versão 11 traz consigo novas funcionalidades e melhorias.'
+                img={imgBook}
+            />
+
         </LastestReleasesContainer>
     )
 }
