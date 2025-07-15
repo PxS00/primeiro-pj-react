@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom';
 
 const Options = styled.ul`
     display: flex;
@@ -16,13 +17,13 @@ const Option = styled.li`
     min-width: 120px;
 `
 
-const textOptions = ['Categorias', 'Minha Estante', 'Favoritos'];
+const textOptions = ['Categorias', 'Estante', 'Favoritos'];
 
 function OptionsHeader() {
     return (
         <Options>
             {textOptions.map((text) => (
-                <Option><p>{text}</p></Option>
+                <Link to = {`/${text}`}><Option><p>{text}</p></Option></Link>
             ))}
         </Options>
     )
