@@ -8,8 +8,8 @@ const SearchContainer = styled.section`
     color: #fff;
     text-align: center;
     padding: 85px 0;
-    height: 270px;
     width: 100%;
+    margin-bottom: 40px;
 `
 const Title = styled.h2`
     color: #fff;
@@ -54,7 +54,7 @@ function Search() {
                     setBooksSearched(resultSearch)
                 }}
             />
-            {booksSearched.map(book => (
+            {booksSearched.slice(0,5).map(book => (
                 <ResultContainer>
                     <p>{book.name}</p>
                     <img src={book.src} alt={book.name}/>
