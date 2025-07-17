@@ -44,9 +44,13 @@ function Search() {
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
-    const booksFromAPI = getBooks();
-    setBooks(booksFromAPI);
+    fetchBooks();
   }, []);
+
+  async function fetchBooks() {
+    const booksFromAPI = await getBooks();
+    setBooks(booksFromAPI);
+  }
 
   return (
     <SearchContainer>

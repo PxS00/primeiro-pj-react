@@ -60,11 +60,4 @@ function RecommendationCard({ title, subtitle, description, img }) {
   );
 }
 
-RecommendationCard.propTypes = {
-  title: PropTypes.string.isRequired,
-  subtitle: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  img: PropTypes.string.isRequired,
-};
-
 export default RecommendationCard;

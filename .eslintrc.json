@@ -1,8 +1,8 @@
 {
   "env": {
-  "browser": true,
-  "es2021": true,
-  "jest": true
+    "browser": true,
+    "es2021": true,
+    "jest": true
   },
   "extends": [
     "eslint:recommended",
@@ -19,7 +19,9 @@
   "plugins": ["react", "prettier"],
   "rules": {
     "prettier/prettier": "error",
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-key": "off",
+    "react/prop-types": "off"
   },
   "settings": {
     "react": {
