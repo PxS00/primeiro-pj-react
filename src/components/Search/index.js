@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Input from '../Input';
 import { getBooks } from '../../services/books';
+import { postFavorite } from '../../services/favorites';
 
 const SearchContainer = styled.section`
   background-image: linear-gradient(90deg, #002f52 35%, #326589 165%);
@@ -52,6 +53,11 @@ function Search() {
     setBooks(booksFromAPI);
   }
 
+  async function insertFavorite(id) {
+    await postFavorite(id);
+    alert(`Livro de id: ${id} inserido`);
+  }
+
   return (
     <SearchContainer>
       <Title>Já sabe por onde começar?</Title>
@@ -67,7 +73,7 @@ function Search() {
         }}
       />
       {booksSearched.slice(0, 5).map((book) => (
-        <ResultContainer key={book.id}>
+        <ResultContainer onClick={() => insertFavorite(book.id)}>
           <p>{book.name}</p>
           <img src={book.src} alt={book.name} />
         </ResultContainer>

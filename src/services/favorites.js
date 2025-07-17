@@ -14,8 +14,8 @@ async function postFavorite(id) {
   await favoritesAPI.post(`/${id}`);
 }
 
-async function deleteFavorite(id) {
+async function deleteFavorites(id) {
   await favoritesAPI.delete(`/${id}`);
 }
 
-export { getFavorites, postFavorite, deleteFavorite };
+export { getFavorites, postFavorite, deleteFavorites };
