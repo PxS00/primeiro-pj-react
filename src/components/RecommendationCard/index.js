@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Title } from '../Title';
+import PropTypes from 'prop-types';
 
 const Card = styled.div`
   align-items: center;
@@ -58,5 +59,12 @@ function RecommendationCard({ title, subtitle, description, img }) {
     </Card>
   );
 }
+
+RecommendationCard.propTypes = {
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+};
 
 export default RecommendationCard;

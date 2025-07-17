@@ -23,7 +23,7 @@ function OptionsHeader() {
   return (
     <Options>
       {textOptions.map((text) => (
-        <Link to={`/${text}`}>
+        <Link key={text} to={`/${text}`}>
           <Option>
             <p>{text}</p>
           </Option>
